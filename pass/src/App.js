@@ -1,11 +1,14 @@
+import React from 'react';
 import './App.css';
 import Nav from './components/layout/NavBar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SearchClinic from './components/pages/SearchClinic';
+
 
 function App() {
   return (
     <div className="App">
-      <Nav/>
+      <Nav />
+      <SearchClinic/>
     </div>
   );
 }

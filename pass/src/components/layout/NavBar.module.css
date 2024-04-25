@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
 .navbar{
     background-color: #226399;
+    display: flex;
+    justify-content: space-between;
 }
+
+.navbar div{
+    text-align: center;
+}
+
+.navbar img{
+    
+}
+
+.navbar ul{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+ 
+}
+
+.navbar li{
+    font-family: jura;
+    margin-right: 24px;
+    color: white;
+}
+
