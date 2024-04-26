@@ -12,7 +12,7 @@ export default function Register() {
                     <img src={logo} alt="Pass+ Logo" className="logo" />
                     <h1 className='pass'>Pass+</h1>
                 </div>
-
+                <div className='line'></div>
                 <h1>Cadastre-se</h1>
 
                 <label htmlFor="username">Nome de usuário</label>
