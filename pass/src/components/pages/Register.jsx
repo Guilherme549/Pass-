@@ -3,7 +3,7 @@ import './Register.css';
 import logo from '../../img/logoPass+.png'
 import registerImg from '../../img/register-page-img.svg'
 
-
+// melhorias: add icons to inputs, 
 export default function Register() {
     return (
         <div className="register-container">
