@@ -9,6 +9,7 @@
 }
 
 .checkbox_filter_search label {
+    width: 8.2vw;
     color: #626161;
     align-items: center;
     background-color: #f0f0f0; 

@@ -10,8 +10,36 @@
 }
 
 .search_clinic_div_filter {
+  margin-right: 40px;
+  margin-bottom: 28px;
   width: 600px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
 }
 
+
+
+.search_clinic_div_display {
+  display: flex;
+}
+
+.search_clinic_div_lembretes p {
+  color: white;
+  background-color: #09A6A3;
+  border-top: 20px solid #226399;
+  padding: 15px;
+}
+
+
+/* ...outros estilos... */
+
+.divider {
+  width: 580px;
+  border: none; 
+  height: 3px; /* Define a altura do hr */
+  background-color: #eaeaea; /* Define a cor de fundo */
+  margin-top: 20px; /* Espaçamento acima do hr */
+  margin-bottom: 20px; /* Espaçamento abaixo do hr */
+  padding-left: 0;
+}
