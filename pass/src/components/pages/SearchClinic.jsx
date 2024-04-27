@@ -7,7 +7,7 @@ import { MdFaceUnlock } from "react-icons/md";
 import { BsEar } from "react-icons/bs";
 import { MdOutlineVerified } from "react-icons/md";
 import { FaRegStar } from "react-icons/fa";
-import DoctorsUL from '../../UserList/DoctorsUL';
+import DoctorsUL from '../../userList/DoctorsUL';
 import styles from "./SearchClinic.module.css"
 import { GoAlertFill } from "react-icons/go";
 
@@ -48,6 +48,7 @@ export default function SearchClinic() {
           </section>
         </div>
         <section>
+          <p className={styles.results}>6 resultados encontrados para usa cidade</p>
           <DoctorsUL />
         </section>
       </div>

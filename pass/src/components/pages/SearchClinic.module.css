@@ -43,3 +43,8 @@
   margin-bottom: 20px; /* Espaçamento abaixo do hr */
   padding-left: 0;
 }
+
+.results {
+  font-size: 1.2em;
+  margin-left: 20px;
+}
