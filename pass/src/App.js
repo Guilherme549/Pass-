@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Nav from './components/layout/NavBar';
 import SearchClinic from './components/pages/SearchClinic';
 import Signup from './components/pages/Signup'
 import Login from './components/pages/Login';
@@ -12,7 +11,7 @@ function App() {
      <Router>
        <Routes>
           <Route path='Signup/' element={<Signup />}></Route>
-          <Route path='login/' element={<Login/>}></Route>
+          <Route path='/' element={<Login/>}></Route>
           <Route path='search/' element={<SearchClinic />}></Route>
        </Routes>
      </Router>
