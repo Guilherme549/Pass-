@@ -12,7 +12,7 @@
 .search_clinic_div_filter {
   margin-right: 40px;
   margin-bottom: 28px;
-  width: 600px;
+  width: 30vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 

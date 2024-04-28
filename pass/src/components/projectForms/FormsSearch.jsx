@@ -15,7 +15,7 @@ export default function FormsSearch() {
                 <Input type='text' name='buscarCidade' placeholder='Busque pela cidade' />
                 <Input type='text' name='atendimento' placeholder='Atendimento' />
                 <Input type='text' name='tipoAtendimento' placeholder='Tipo de atendimento' />
-                <Button />
+                <Button placeholder="Buscar" />
             </div>
             <div className={styles.search_clinic_div_filter}>
                 <CheckBox icon={<PiChatCircleTextDuotone />} name="Psicologo" id="Psicologo" value="Psicologo" />
