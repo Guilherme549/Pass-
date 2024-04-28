@@ -9,6 +9,7 @@
 }
 
 .checkbox_filter_search label {
+  user-select: none;
     width: 155px;
     color: #626161;
     align-items: center;
@@ -20,8 +21,5 @@
     display: flex;
 }
 
-.checkbox_filter_search input[type="checkbox"]:checked + label {
-  background-color: black;
-}
 
 
