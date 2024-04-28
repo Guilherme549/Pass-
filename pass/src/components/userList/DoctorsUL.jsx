@@ -4,7 +4,7 @@ import { MdOutlineVerified } from "react-icons/md";
 import { CiMap } from "react-icons/ci";
 import { SlCalender } from "react-icons/sl";
 import styles from './DoctorsUL.module.css'
-import ana from './../img/ana.png'
+import ana from '../../img/ana.png'
 
 export default function DoctorsUL(){
     return (
