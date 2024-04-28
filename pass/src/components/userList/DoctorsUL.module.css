@@ -1,12 +1,13 @@
 .doctorsList {
     padding: 0;
     margin-top: 40px;
+    align-items: flex-start;
 }/* DoctorsUL.module.css */
 
 .doctorsList p{
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 5px;
 }
 
 .doctorItem {
@@ -16,8 +17,10 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  gap: 15px;
   width: 400px;
+  flex-direction: row; /* Define a direção do flex para linha */
+  align-items: center; /* Centraliza os itens verticalmente */
+  gap: 15px; /* Espaço entre a imagem e o contêiner de informações */
 }
 
 .doctorInfo {
@@ -49,3 +52,13 @@
 .addressIcon, .calendarIcon {
   color: #6c757d; /* Icon color */
 }
+
+.doctorItem img {
+  border-radius: 50%; /* Deixa a imagem redonda */
+  width: 80px; /* Ajuste a largura conforme necessário */
+  height: 80px; /* Ajuste a altura conforme necessário */
+  object-fit: cover; /* Garante que a imagem cubra toda a área sem distorção */
+  border: 3px solid #78BBBB; /* Borda da imagem, opcional */
+  align-self: start;
+}
+

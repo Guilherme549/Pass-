@@ -7,25 +7,25 @@ import styles from './DoctorsUL.module.css'
 import ana from '../../img/ana.png'
 import Button from "../forms/Button";
 
-export default function DoctorsUL(){
+export default function DoctorsUL() {
     return (
         <ul className={styles.doctorsList}>
             <li className={styles.doctorItem}>
-                <img src={ana} alt="Doctor Profile" /> {/* Adicione o caminho para sua imagem */}
-                <div className={styles.doctorInfo}>
-                    <form>
-                        <h2 className={styles.doctorName}>
-                            Dra. Ana Maria Nogueira <span><MdOutlineVerified /></span>
-                        </h2>
-                        <p className={styles.description}>Dermatologista louca da cabeca </p>
-                        <p className={styles.stars}><FaRegStar /><FaRegStar /><FaRegStar /><FaRegStar /><FaRegStar /></p>
-                        <p className={styles.address}><CiMap /> Rua tal</p>
-                        <p className={styles.appointment}><SlCalender /> Dia tal</p>
-                        <Button placeholder="Agendar" />
-                    </form>
-                    
+                <img src={ana} alt="Doctor Profile" className={styles.doctorImg} />
+                <div className={styles.doctorDetails}>
+                    <h1 className={styles.doctorName}>
+                        Dra. Ana Maria Nogueira <span><MdOutlineVerified /></span>
+                    </h1>
+                    <p className={styles.description}>Dermatologista, especialista em estética e câncer de pele</p>
+                    <p className={styles.stars}><FaRegStar /><FaRegStar /><FaRegStar /><FaRegStar /><FaRegStar /></p>
+                    <p className={styles.address}><CiMap /> Rua tal</p>
+                    <p className={styles.appointment}><SlCalender /> Dia tal</p>
+                    <Button placeholder="Agendar" />
                 </div>
             </li>
         </ul>
     )
 }
+
+
+
