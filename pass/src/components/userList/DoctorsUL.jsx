@@ -8,6 +8,9 @@ import ana from '../../img/ana.png'
 import Button from "../forms/Button";
 import antonio from '../../img/image.png'
 
+
+// essas li serão dinamicas
+
 export default function DoctorsUL() {
     return (
         <ul className={styles.doctorsList}>
@@ -37,7 +40,34 @@ export default function DoctorsUL() {
                     <Button placeholder="Agendar" />
                 </div>
             </li>
+            <li className={styles.doctorItem}>
+                <img src={antonio} alt="Doctor Profile" className={styles.doctorImg} />
+                <div className={styles.doctorDetails}>
+                    <h1 className={styles.doctorName}>
+                        Dra. Ana Maria Nogueira <span><MdOutlineVerified /></span>
+                    </h1>
+                    <p className={styles.description}>Dermatologista, especialista em estética e câncer de pele</p>
+                    <p className={styles.stars}><FaRegStar /><FaRegStar /><FaRegStar /><FaRegStar /><FaRegStar /></p>
+                    <p className={styles.address}><CiMap /> Rua tal</p>
+                    <p className={styles.appointment}><SlCalender /> Dia tal</p>
+                    <Button placeholder="Agendar" />
+                </div>
+            </li>
+            <li className={styles.doctorItem}>
+                <img src={antonio} alt="Doctor Profile" className={styles.doctorImg} />
+                <div className={styles.doctorDetails}>
+                    <h1 className={styles.doctorName}>
+                        Dra. Ana Maria Nogueira <span><MdOutlineVerified /></span>
+                    </h1>
+                    <p className={styles.description}>Dermatologista, especialista em estética e câncer de pele</p>
+                    <p className={styles.stars}><FaRegStar /><FaRegStar /><FaRegStar /><FaRegStar /><FaRegStar /></p>
+                    <p className={styles.address}><CiMap /> Rua tal</p>
+                    <p className={styles.appointment}><SlCalender /> Dia tal</p>
+                    <Button placeholder="Agendar" />
+                </div>
+            </li>
         </ul>
+        
     )
 }
 

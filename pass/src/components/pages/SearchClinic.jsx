@@ -20,7 +20,7 @@ export default function SearchClinic() {
           </section>
         </div>
         <section>
-          <p className={styles.results}>6 resultados encontrados para usa cidade</p>
+          <p className={styles.results}>4 resultados encontrados para usa cidade</p>
           <DoctorsUL />
         </section>
       </div>
