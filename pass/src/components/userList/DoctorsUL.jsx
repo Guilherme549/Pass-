@@ -16,16 +16,20 @@ export default function DoctorsUL() {
     const caminhoImagem = "http://127.0.0.1:8000/"
     const [doctors, setDoctors] = useState([]);
 
+    // Quando o componente é montado ou quando a variável doctors é alterada, a função de callback "fectchApi" passada para o useEffect é executada.
     useEffect(() => {
         const fetchApi = async () => {
             const url = 'http://127.0.0.1:8000/todo/lista/?format=json'
             const response = await fetch(url);
+            
+            // tansformando os dados em json
             const objJson = await response.json();
             // console.log(objJson[0].name);
             setDoctors(objJson)
         };
         fetchApi();
-    }, []); 
+
+    }, [doctors]); 
 
     return (
         <ul className={styles.doctorsList}>
