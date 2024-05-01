@@ -3,8 +3,7 @@ import { FaRegStar } from "react-icons/fa";
 import { MdOutlineVerified } from "react-icons/md";
 import { CiMap } from "react-icons/ci";
 import { SlCalender } from "react-icons/sl";
-import styles from './DoctorsUL.module.css'
-import ana from '../../img/ana.png'
+import styles from './DoctorsUL.module.css';
 import Button from "../forms/Button";
 // Remove unused import statements
 // import antonio from '../../img/image.png'
@@ -14,6 +13,7 @@ import Button from "../forms/Button";
 // essas li serão dinamicas
 
 export default function DoctorsUL() {
+    const caminhoImagem = "http://127.0.0.1:8000/"
     const [doctors, setDoctors] = useState([]);
 
     useEffect(() => {
@@ -31,7 +31,7 @@ export default function DoctorsUL() {
         <ul className={styles.doctorsList}>
             {doctors.map((e) => (
                 <li key={e.id} className={styles.doctorItem}>
-                    <img src={e.image} alt="Doctor Profile" className={styles.doctorImg} />
+                    <img src={`${caminhoImagem}${e.image}`} alt="Doctor Profile" className={styles.doctorImg} />
                     <div className={styles.doctorDetails}>
                         <h1 className={styles.doctorName}>
                             {e.name} <span><MdOutlineVerified /></span>
@@ -39,7 +39,7 @@ export default function DoctorsUL() {
                         <p className={styles.description}>{e.description}</p>
                         <p className={styles.stars}><FaRegStar /><FaRegStar /><FaRegStar /><FaRegStar /><FaRegStar /></p>
                         <p className={styles.address}><CiMap />{e.adress}</p>
-                        <p classame={styles.appointment}><SlCalender />{e.data}</p>
+                        <p className={styles.appointment}><SlCalender />{e.data}</p>
                         <Button placeholder="Agendar" />
                     </div>
                 </li>
