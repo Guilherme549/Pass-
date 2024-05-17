@@ -47,6 +47,8 @@ export default function SearchClinic() {
     try {
       const response = await axios.post('http://127.0.0.1:8000/todo/doctors-filter/', { doctorType: info });
 
+      console.log(response.data, "Resposta do filtro");
+
     } catch (error) {
       console.error('Erro ao filtrar médicos:', error);
     }
