@@ -10,37 +10,49 @@ import { FilterGetContextDoctors } from '../../context/FiltertGetContextDoctors'
 export default function SearchClinic() {
 
 
-  
+
   const [doctors, setDoctors] = useState([]);
   const [doctorType, setdoctorType] = useState(null);
+
   const doctorComEnderecoProcurado = doctors.find(doctor => doctor.address === doctorType);
   console.log(doctorComEnderecoProcurado)
   useEffect(() => {
-    const fetchAxios = async () => {
+    const fetchAxiosGet = async () => {
       try {
         const response = await axios.get(`http://127.0.0.1:8000/todo/lista/?format=json`);
 
-        if (doctorComEnderecoProcurado){
-          setDoctors([doctorComEnderecoProcurado])
-          console.log(doctors)
-        } else { 
-          setDoctors(response.data); 
-          // console.log( typeof response.data)
-
-        }
         
+          setDoctors(response.data);
+          // console.log( typeof response.data
+
       } catch (error) {
-        console.log(error);
+        console.log(error); 
       }
     };
-    fetchAxios();
-  }, [doctorComEnderecoProcurado]);
+    fetchAxiosGet();
 
-  const handleSubmit = (e) => {
+
+  }, []);
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const info = e.target.buscarCidade.value;
-    setdoctorType(info)
-    
+    const info = {
+      buscarCidade: e.target.buscarCidade.value,
+      atendimento: e.target.atendimento.value,
+      tipoAtendimento: e.target.tipoAtendimento.value
+    };
+
+    console.log(info, "MInha info");
+    try {
+      const response = await axios.post('http://127.0.0.1:8000/todo/doctors-filter/', { doctorType: info });
+
+      console.log(response.data, "Resposta do filtro");
+
+    } catch (error) {
+      console.error('Erro ao filtrar médicos:', error);
+    }
+
   }
 
   return (
