@@ -22,7 +22,6 @@ export default function FormsSearch({ handleSubmit }) {
             <h2>Olá, Paciente</h2>
             <div className={styles.search_clinic_div_search}>
                 <Input type='text' name='buscarCidade' placeholder='Busque pela cidade' />
-                {/* <Input type='text' name='atendimento' placeholder='Especialidade do médico' /> */}
                 <select name="atendimento" id="atendimento" className={styleInput.search_select}>
                     <option value="" disabled selected>Especialidade do médico</option>
                     <option value="cardiologia">Cardiologia</option>

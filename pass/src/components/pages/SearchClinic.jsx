@@ -12,7 +12,7 @@ export default function SearchClinic() {
 
 
   const [doctors, setDoctors] = useState([]);
-
+  const [filter, setFilter] = useState("");
   useEffect(() => {
     const fetchAxiosGet = async () => {
       try {
@@ -38,6 +38,8 @@ export default function SearchClinic() {
       atendimento: e.target.atendimento.value,
       tipoAtendimento: e.target.tipoAtendimento.value
     };
+
+    setFilter(info)
 
     try {
       const responsePost = await axios.post('http://127.0.0.1:8000/todo/doctors-filter/', { doctorType: info });
@@ -66,7 +68,7 @@ export default function SearchClinic() {
             </section>
           </div>
           <section>
-            <p className={styles.results}>4 resultados encontrados para usa cidade</p>
+            {filter ? <p className={styles.results}>{doctors.length} medicos encontrados para sua cidade</p> : <p>Medicos</p>}
             <DoctorsUL/>
           </section>
         </div>
