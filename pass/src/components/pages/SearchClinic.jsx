@@ -12,10 +12,7 @@ export default function SearchClinic() {
 
 
   const [doctors, setDoctors] = useState([]);
-  const [doctorType, setdoctorType] = useState(null);
 
-  // const doctorComEnderecoProcurado = doctors.find(doctor => doctor.address === doctorType);
-  // console.log(doctorComEnderecoProcurado)
   useEffect(() => {
     const fetchAxiosGet = async () => {
       try {
@@ -23,7 +20,6 @@ export default function SearchClinic() {
 
         
           setDoctors(response.data);
-          // console.log( typeof response.data
 
       } catch (error) {
         console.log(error); 
@@ -43,16 +39,12 @@ export default function SearchClinic() {
       tipoAtendimento: e.target.tipoAtendimento.value
     };
 
-    console.log(info, "MInha info");
     try {
       const responsePost = await axios.post('http://127.0.0.1:8000/todo/doctors-filter/', { doctorType: info });
 
       if(responsePost){
         setDoctors(responsePost.data);
       }
-
-      console.log(responsePost.data, "Resposta do filtro");
-
     } catch (error) {
       console.error('Erro ao filtrar médicos:', error);
     }
