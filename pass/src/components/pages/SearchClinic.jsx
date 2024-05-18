@@ -14,8 +14,8 @@ export default function SearchClinic() {
   const [doctors, setDoctors] = useState([]);
   const [doctorType, setdoctorType] = useState(null);
 
-  const doctorComEnderecoProcurado = doctors.find(doctor => doctor.address === doctorType);
-  console.log(doctorComEnderecoProcurado)
+  // const doctorComEnderecoProcurado = doctors.find(doctor => doctor.address === doctorType);
+  // console.log(doctorComEnderecoProcurado)
   useEffect(() => {
     const fetchAxiosGet = async () => {
       try {
@@ -45,9 +45,13 @@ export default function SearchClinic() {
 
     console.log(info, "MInha info");
     try {
-      const response = await axios.post('http://127.0.0.1:8000/todo/doctors-filter/', { doctorType: info });
+      const responsePost = await axios.post('http://127.0.0.1:8000/todo/doctors-filter/', { doctorType: info });
 
-      console.log(response.data, "Resposta do filtro");
+      if(responsePost){
+        setDoctors(responsePost.data);
+      }
+
+      console.log(responsePost.data, "Resposta do filtro");
 
     } catch (error) {
       console.error('Erro ao filtrar médicos:', error);
@@ -71,7 +75,7 @@ export default function SearchClinic() {
           </div>
           <section>
             <p className={styles.results}>4 resultados encontrados para usa cidade</p>
-            <DoctorsUL />
+            <DoctorsUL/>
           </section>
         </div>
       </div>
