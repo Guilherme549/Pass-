@@ -5,30 +5,46 @@ import { BsEar } from "react-icons/bs";
 import CheckBox from '../forms/CheckBox'
 import Input from '../forms/Input'
 import styles from "./FormsSearch.module.css"
-import Button from "../forms/Button";
+import Button from "../forms/Button" ;
 import { FilterGetContextDoctors } from '../../context/FiltertGetContextDoctors';
+import styleInput from "../forms/Input.module.css"
+
 
 export default function FormsSearch({ handleSubmit }) {
     const doctors = useContext(FilterGetContextDoctors);
 
     const [filter, setFilter] = useState("");
 
-    
+
 
     return (
         <form onSubmit={handleSubmit}>
             <h2>Olá, Paciente</h2>
             <div className={styles.search_clinic_div_search}>
                 <Input type='text' name='buscarCidade' placeholder='Busque pela cidade' />
-                <Input type='text' name='atendimento' placeholder='Especialidade do médico' />
+                {/* <Input type='text' name='atendimento' placeholder='Especialidade do médico' /> */}
+                <select name="atendimento" id="atendimento" className={styleInput.search_select}>
+                    <option value="" disabled selected>Especialidade do médico</option>
+                    <option value="cardiologia">Cardiologia</option>
+                    <option value="clinico geral">Clínico Geral</option>
+                    <option value="dermatologia">Dermatologia</option>
+                    <option value="endocrinologia">Endocrinologia</option>
+                    <option value="gastroenterologia">Gastroenterologia</option>
+                    <option value="ginecologia">Ginecologia</option>
+                    <option value="infectologia">Infectologia</option>
+                    <option value="nefrologia">Nefrologia</option>
+                    <option value="neurologia">Neurologia</option>
+                    <option value="oftalmologia">Oftalmologia</option>
+                    <option value="ortopedia">Ortopedia</option>
+                    <option value="otorrinolaringologia">Otorrinolaringologia</option>
+                    <option value="pediatria">Pediatria</option>
+                    <option value="pneumologia">Pneumologia</option>
+                    <option value="psiquiatria">Psiquiatria</option>
+                    <option value="reumatologia">Reumatologia</option>
+                    <option value="urologia">Urologia</option>
+                </select>
                 <Input type='text' name='tipoAtendimento' placeholder='Tipo de atendimento' />
                 <Button placeholder="Buscar" />
-            </div>
-            <div className={styles.search_clinic_div_filter}>
-                <CheckBox icon={<PiChatCircleTextDuotone />} name="Psicologo" id="Psicologo" value="Psicologo" />
-                <CheckBox icon={<MdFaceUnlock />} name="Dermatologista" id="Dermatologista" value="Dermatologista" />
-                <CheckBox icon={<BsEar />} name="Oftalmologista" id="Oftalmologista" value="Oftalmologista" />
-
             </div>
             <hr className={styles.divider} />
         </form>
