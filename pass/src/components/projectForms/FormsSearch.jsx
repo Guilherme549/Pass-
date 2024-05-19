@@ -13,7 +13,7 @@ export default function FormsSearch({ handleSubmit }) {
             <div className={styles.search_clinic_div_search}>
                 <Input type='text' name='buscarCidade' placeholder='Busque pela cidade' required={true} />
                 <select name="atendimento" id="atendimento" className={styleInput.search_select}>
-                    <option value="" disabled selected>Especialidade do médico</option>
+                    <option value="" selected>Especialidade do médico</option>
                     <option value="cardiologia">Cardiologia</option>
                     <option value="clinico geral">Clínico Geral</option>
                     <option value="dermatologia">Dermatologia</option>
