@@ -1,27 +1,17 @@
-import React, { Children, useContext, useState } from "react";
-import { PiChatCircleTextDuotone } from "react-icons/pi";
-import { MdFaceUnlock } from "react-icons/md";
-import { BsEar } from "react-icons/bs";
-import CheckBox from '../forms/CheckBox'
+import React from 'react'
 import Input from '../forms/Input'
 import styles from "./FormsSearch.module.css"
 import Button from "../forms/Button" ;
-import { FilterGetContextDoctors } from '../../context/FiltertGetContextDoctors';
 import styleInput from "../forms/Input.module.css"
 
 
 export default function FormsSearch({ handleSubmit }) {
-    const doctors = useContext(FilterGetContextDoctors);
-
-    const [filter, setFilter] = useState("");
-
-
 
     return (
         <form onSubmit={handleSubmit}>
             <h2>Olá, Paciente</h2>
             <div className={styles.search_clinic_div_search}>
-                <Input type='text' name='buscarCidade' placeholder='Busque pela cidade' />
+                <Input type='text' name='buscarCidade' placeholder='Busque pela cidade' required={true} />
                 <select name="atendimento" id="atendimento" className={styleInput.search_select}>
                     <option value="" disabled selected>Especialidade do médico</option>
                     <option value="cardiologia">Cardiologia</option>

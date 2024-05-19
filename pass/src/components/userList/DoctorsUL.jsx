@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { FaRegStar } from "react-icons/fa";
 import { MdOutlineVerified } from "react-icons/md";
 import { CiMap } from "react-icons/ci";
 import { SlCalender } from "react-icons/sl";
 import styles from './DoctorsUL.module.css';
 import Button from "../forms/Button";
-import axios from 'axios';
+
 import { FilterGetContextDoctors } from '../../context/FiltertGetContextDoctors';
 
 export default function DoctorsUL() {
