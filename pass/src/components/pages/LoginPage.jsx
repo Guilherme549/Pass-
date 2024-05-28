@@ -28,6 +28,11 @@ const LoginPage = () => {
           <input type="password" placeholder="Senha" className="login-input" />
           <button type="submit" className="login-button">Login</button>
         </form>
+        <div className="or-separator">
+          <hr />
+          <span>Ou</span>
+          <hr />
+        </div>
         <div className="google-login-container">
           <button className="google-login-button" onClick={handleGoogleLogin}>
             <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" className="google-logo" />

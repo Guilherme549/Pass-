@@ -70,11 +70,32 @@
   background: #2a5298;
 }
 
+.or-separator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.or-separator hr {
+  flex-grow: 1;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0;
+}
+
+.or-separator span {
+  padding: 0 1rem;
+  color: #888;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .google-login-container {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem; /* Reduced margin-top */
 }
 
 .google-login-button {
