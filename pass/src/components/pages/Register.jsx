@@ -20,8 +20,8 @@ const SignupPage = () => {
     <div className="signup-page">
       <div className="signup-container">
         <div className="logo-container">
-          <span className="logo-text">Pass+</span>
           <img src={logoPass} alt="Pass+" className="signup-logo" />
+          <span className="logo-text">Pass+</span>
         </div>
         <form className="signup-form">
           <input type="text" placeholder="Nome" className="signup-input" />

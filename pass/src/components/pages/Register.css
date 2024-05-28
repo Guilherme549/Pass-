@@ -27,7 +27,7 @@
 
 .signup-logo {
   width: 60px;
-  margin-left: 1rem; /* Adjusted for spacing */
+  margin-right: 1rem;
 }
 
 .logo-text {
@@ -74,7 +74,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .or-separator hr {
@@ -95,7 +95,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 1rem; /* Reduced margin-top */
+  margin-top: 1rem;
 }
 
 .google-login-button {
