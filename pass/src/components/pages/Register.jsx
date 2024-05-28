@@ -1,38 +1,29 @@
 import React from 'react';
 import './Register.css';
-import logo from '../../img/logoPass+.png'
-import registerImg from '../../img/register-page-img.svg'
+import logoPass from '../../img/logoPass.svg';
 
-// melhorias: add icons to inputs, 
-export default function Register() {
-    return (
-        <div className="register-container">
-            <div className="register-form">
-                <div className='register-header'>
-                    <img src={logo} alt="Pass+ Logo" className="logo" />
-                    <h1 className='pass'>Pass+</h1>
-                </div>
-                <div className='line'></div>
-                <h1>Cadastre-se</h1>
-
-                <label htmlFor="username">Nome de usuário</label>
-                <input type="text" id="username" placeholder="Nome de usuário" name="username" />
-
-                <label htmlFor="email">E-mail</label>
-                <input type="email" id="email" placeholder="E-mail" name="email" />
-
-                <label htmlFor="password">Senha</label>
-                <input type="password" id="password" placeholder="Senha" name="password" />
-
-                <label htmlFor="confirmPassword">Confirmar senha</label>
-                <input type="password" id="confirmPassword" placeholder="Confirmar senha" name="confirmPassword" />
-
-                <button type="submit">Cadastrar</button>
-                <button type="button" className="login-link">Já possuo uma conta</button>
-            </div>
-            <div className="register-illustration">
-                <img src={registerImg} alt="" />
-            </div>
+const SignupPage = () => {
+  return (
+    <div className="signup-page">
+      <div className="signup-container">
+        <div className="logo-container">
+          <span className="logo-text">Pass+</span>
+          <img src={logoPass} alt="Pass+" className="signup-logo" />
         </div>
-    );
-}
+        <form className="signup-form">
+          <input type="text" placeholder="Nome" className="signup-input" />
+          <input type="email" placeholder="Email" className="signup-input" />
+          <input type="password" placeholder="Senha" className="signup-input" />
+          <input type="password" placeholder="Confirme a Senha" className="signup-input" />
+          <button type="submit" className="signup-button">Cadastrar</button>
+        </form>
+        <div className="login-option">
+          <span>Já possui conta?</span>
+          <a href="/login" className="login-link">Login</a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SignupPage;
