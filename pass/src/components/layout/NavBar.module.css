@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
 
 .navbar{
+
     background-color: #226399;
     display: flex;
     justify-content: space-between;
 }
 
 .navbar div{
+    width: 98.8vw;
     text-align: center;
 }
 
 .navbar ul{
+    width: 98.8vw;
     margin: 0;
     list-style: none;
     display: flex;
