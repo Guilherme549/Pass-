@@ -1,11 +1,16 @@
 import React from 'react'
 import Input from '../forms/Input'
 import styles from "./FormsSearch.module.css"
-import Button from "../forms/Button" ;
+import Button from "../forms/Button";
 import styleInput from "../forms/Input.module.css"
+
+const especialidades = ["cardiologia", "clinico geral",  ]
 
 
 export default function FormsSearch({ handleSubmit }) {
+
+
+
 
     return (
         <form onSubmit={handleSubmit}>
@@ -13,9 +18,14 @@ export default function FormsSearch({ handleSubmit }) {
             <div className={styles.search_clinic_div_search}>
                 <Input type='text' name='buscarCidade' placeholder='Busque pela cidade' required={true} />
                 <select name="atendimento" id="atendimento" className={styleInput.search_select}>
-                    <option value="" selected>Especialidade do médico</option>
+                    {
+                        especialidades.sort((a, b) => a.localeCompare(b) ).map((esp,i)=>(
+                            <option style={{textTransform:"capitalize"}} value={esp}>{esp}</option>
+                        ))
+                    }
+                    {/* <option value="" selected>Especialidade do médico</option>
                     <option value="cardiologia">Cardiologia</option>
-                    <option value="clinico geral">Clínico Geral</option>
+                    <option value="clinico geral">Clínico   </option>
                     <option value="dermatologia">Dermatologia</option>
                     <option value="endocrinologia">Endocrinologia</option>
                     <option value="gastroenterologia">Gastroenterologia</option>
@@ -30,7 +40,7 @@ export default function FormsSearch({ handleSubmit }) {
                     <option value="pneumologia">Pneumologia</option>
                     <option value="psiquiatria">Psiquiatria</option>
                     <option value="reumatologia">Reumatologia</option>
-                    <option value="urologia">Urologia</option>
+                    <option value="urologia">Urologia</option> */}
                 </select>
                 <Input type='text' name='tipoAtendimento' placeholder='Tipo de atendimento' />
                 <Button placeholder="Buscar" />
